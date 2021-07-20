@@ -38,13 +38,15 @@ export function ShrinkingHeaderThreshold(props: ShrinkingHeaderThresholdProps): 
     );
 
     useEffect(() => {
-        const evaluateShrunkState = function (this: HTMLElement): void {
+        const evaluateShrunkState = function (): void {
             if (window.scrollY >= shrinkThreshold) {
                 setShrunk(true);
             } else {
                 setShrunk(false);
             }
         };
+
+        evaluateShrunkState();
 
         const onScroll = throttle(evaluateShrunkState, 250, { leading: true, trailing: true });
 

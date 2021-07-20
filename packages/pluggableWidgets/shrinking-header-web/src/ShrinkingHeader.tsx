@@ -8,13 +8,13 @@ import { ShrinkingHeaderContainerProps } from "../typings/ShrinkingHeaderProps";
 export default function ShrinkingHeader(props: ShrinkingHeaderContainerProps): ReactElement | null {
     const { threshold, shrinkThreshold, initHeight, shrunkHeight, ...commonProps } = props;
 
-    const actualShrinkThreshold = shrinkThreshold.value ? Number(shrinkThreshold.value.toString()) : undefined;
-
-    if (!actualShrinkThreshold) {
-        return null;
-    }
-
     if (threshold) {
+        const actualShrinkThreshold = shrinkThreshold.value ? Number(shrinkThreshold.value.toString()) : undefined;
+
+        if (!actualShrinkThreshold) {
+            return null;
+        }
+
         return (
             <ShrinkingHeaderThreshold
                 {...commonProps}
