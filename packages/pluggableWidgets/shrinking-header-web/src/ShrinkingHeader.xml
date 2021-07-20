@@ -18,17 +18,17 @@
             </property>
             <property key="shrinkThreshold" type="expression" defaultValue="100">
                 <caption>Shrink after scrolling</caption>
-                <description>Scroll amount in pixels.</description>
+                <description>Positive scroll amount in pixels.</description>
                 <returnType type="Integer"/>
             </property>
             <property key="initHeight" type="expression" defaultValue="125">
                 <caption>Initial height</caption>
-                <description>Height in pixels.</description>
+                <description>Positive height in pixels.</description>
                 <returnType type="Integer"/>
             </property>
             <property key="shrunkHeight" type="expression" defaultValue="50">
                 <caption>Shrunk height</caption>
-                <description>Height in pixels.</description>
+                <description>Positive height in pixels.</description>
                 <returnType type="Integer"/>
             </property>
         </propertyGroup>
