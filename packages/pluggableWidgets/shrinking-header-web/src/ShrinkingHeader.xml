@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="com.mendix.widget.web.shrinkingheader.ShrinkingHeader" pluginWidget="true" offlineCapable="true"
+        xmlns="http://www.mendix.com/widget/1.0/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../../../../node_modules/mendix/custom_widget.xsd">
+    <name>Shrinking header</name>
+    <description>A fixed header that shrinks when scrolling down a page."</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="content" type="widgets">
+                <caption>Header contents</caption>
+                <description/>
+            </property>
+            <property key="threshold" type="boolean" defaultValue="true">
+                <caption>Shrink with threshold</caption>
+                <description/>
+            </property>
+            <property key="shrinkThreshold" type="expression" defaultValue="100">
+                <caption>Shrink after scrolling</caption>
+                <description>Positive scroll amount in pixels.</description>
+                <returnType type="Integer"/>
+            </property>
+            <property key="initHeight" type="expression" defaultValue="125">
+                <caption>Initial height</caption>
+                <description>Positive height in pixels.</description>
+                <returnType type="Integer"/>
+            </property>
+            <property key="shrunkHeight" type="expression" defaultValue="50">
+                <caption>Shrunk height</caption>
+                <description>Positive height in pixels.</description>
+                <returnType type="Integer"/>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>

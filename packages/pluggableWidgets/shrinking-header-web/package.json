@@ -1,0 +1,36 @@
+{
+  "name": "shrinking-header-web",
+  "widgetName": "ShrinkingHeader",
+  "version": "1.0.0",
+  "description": "A fixed header that shrinks when scrolling down a page",
+  "copyright": "Copyright © 2021 Mendix B.V.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IIsaku/widgets-resources.git"
+  },
+  "license": "Apache-2.0",
+  "config": {
+    "mendixHost": "http://localhost:8080",
+    "developmentPort": 3000
+  },
+  "packagePath": "com.mendix.widget.web",
+  "scripts": {
+    "start": "pluggable-widgets-tools start:server",
+    "dev": "pluggable-widgets-tools start:web",
+    "build": "pluggable-widgets-tools build:web",
+    "format": "pluggable-widgets-tools format",
+    "lint": "eslint --config ../../../.eslintrc.js --ext .jsx,.js,.ts,.tsx src/",
+    "test": "jest",
+    "release": "pluggable-widgets-tools release:web"
+  },
+  "dependencies": {
+    "@mendix/piw-utils-internal": "^1.0.0",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@mendix/pluggable-widgets-tools": ">=8.9.2",
+    "@testing-library/react-hooks": "^3.4.2",
+    "@types/lodash-es": "^4.17.4",
+    "@types/resize-observer-browser": "^0.1.5"
+  }
+}

@@ -17,3 +17,17 @@ mendixProject
 **/screenshot
 **/screenshot-results
 **/tests/testProject
+
+# Shrinking header web
+!packages/pluggableWidgets/shrinking-header-web/tests/testProject
+packages/pluggableWidgets/shrinking-header-web/tests/testProject/deployment
+packages/pluggableWidgets/shrinking-header-web/tests/testProject/javascriptsource
+packages/pluggableWidgets/shrinking-header-web/tests/testProject/javasource
+packages/pluggableWidgets/shrinking-header-web/tests/testProject/packages
+packages/pluggableWidgets/shrinking-header-web/tests/testProject/resources
+packages/pluggableWidgets/shrinking-header-web/tests/testProject/theme_old
+packages/pluggableWidgets/shrinking-header-web/tests/testProject/userlib
+packages/pluggableWidgets/shrinking-header-web/tests/testProject/Mendix8.launch
+packages/pluggableWidgets/shrinking-header-web/tests/testProject/ShrinkingHeader.mpr.bak
+packages/pluggableWidgets/shrinking-header-web/tests/testProject/ShrinkingHeader.mpr.lock
+packages/pluggableWidgets/shrinking-header-web/tests/testProject/testProject.launch
