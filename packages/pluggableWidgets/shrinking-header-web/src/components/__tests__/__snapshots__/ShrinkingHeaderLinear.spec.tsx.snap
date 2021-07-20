@@ -13,7 +13,9 @@ exports[`ShrinkingHeaderLinear renders correctly 1`] = `
     [MockFunction] {
       "calls": Array [
         Array [
-          <header>
+          <header
+            style="height: 100px;"
+          >
             <h1>
               Header
             </h1>
@@ -49,7 +51,7 @@ exports[`ShrinkingHeaderLinear renders correctly 1`] = `
     <header
       style={
         Object {
-          "height": undefined,
+          "height": 100,
         }
       }
     >

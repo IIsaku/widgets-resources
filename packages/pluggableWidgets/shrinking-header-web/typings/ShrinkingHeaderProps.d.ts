@@ -15,8 +15,8 @@ export interface ShrinkingHeaderContainerProps {
     content: ReactNode;
     threshold: boolean;
     shrinkThreshold: DynamicValue<Big>;
-    initHeight: number;
-    shrunkHeight: number;
+    initHeight: DynamicValue<Big>;
+    shrunkHeight: DynamicValue<Big>;
 }
 
 export interface ShrinkingHeaderPreviewProps {
@@ -25,6 +25,6 @@ export interface ShrinkingHeaderPreviewProps {
     content: { widgetCount: number; renderer: ComponentType<{caption?: string}> };
     threshold: boolean;
     shrinkThreshold: string;
-    initHeight: number | null;
-    shrunkHeight: number | null;
+    initHeight: string;
+    shrunkHeight: string;
 }

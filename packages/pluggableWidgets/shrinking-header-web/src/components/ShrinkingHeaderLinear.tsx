@@ -45,6 +45,8 @@ export function ShrinkingHeaderLinear(props: ShrinkingHeaderLinearProps): ReactE
             setHeaderHeight(headerHeight);
         };
 
+        updateHeaderHeight();
+
         document.addEventListener("scroll", updateHeaderHeight);
 
         return () => {

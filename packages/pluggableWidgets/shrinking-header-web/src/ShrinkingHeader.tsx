@@ -24,12 +24,19 @@ export default function ShrinkingHeader(props: ShrinkingHeaderContainerProps): R
         );
     }
 
+    const actualInitHeight = initHeight.value ? Number(initHeight.value.toString()) : undefined;
+    const actualShrunkHeight = shrunkHeight.value ? Number(shrunkHeight.value.toString()) : undefined;
+
+    if (!actualInitHeight || !actualShrunkHeight) {
+        return null;
+    }
+
     return (
         <ShrinkingHeaderLinear
             {...commonProps}
             className={commonProps.class}
-            initHeight={initHeight}
-            shrunkHeight={shrunkHeight}
+            initHeight={actualInitHeight}
+            shrunkHeight={actualShrunkHeight}
         />
     );
 }
