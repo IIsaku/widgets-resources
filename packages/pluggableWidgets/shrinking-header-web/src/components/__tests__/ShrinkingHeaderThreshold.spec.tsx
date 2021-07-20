@@ -22,7 +22,6 @@ describe("ShrinkingHeaderThreshold", () => {
 
     beforeEach(() => {
         defaultShrinkingHeaderProps = {
-            rootElementRef: jest.fn(),
             className: "class-name",
             style: { color: "green" },
             tabIndex: 4,
@@ -43,7 +42,6 @@ describe("ShrinkingHeaderThreshold", () => {
         lastMockedResizeObserver.notifyChange();
         shrinkingHeaderThreshold.update();
         expect(shrinkingHeaderThreshold).toMatchSnapshot();
-        expect(defaultShrinkingHeaderProps.rootElementRef).toHaveBeenCalledTimes(1);
     });
 
     function testShrinkClassBeingApplied(threshold: number): ReactWrapper {

@@ -3,13 +3,6 @@ import { act } from "react-dom/test-utils";
 import { mount } from "enzyme";
 
 import { ShrinkingHeaderLinear, ShrinkingHeaderLinearProps } from "../ShrinkingHeaderLinear";
-import { mockResizeObserver } from "../../utils/__tests__/ResizeObserverMock";
-
-let lastMockedResizeObserver: ResizeObserver & { notifyChange: () => void };
-
-mockResizeObserver(act, _lastMockedResizeObserver => {
-    lastMockedResizeObserver = _lastMockedResizeObserver;
-});
 
 let documentEventListeners: Array<() => void>;
 
@@ -22,7 +15,6 @@ describe("ShrinkingHeaderLinear", () => {
 
     beforeEach(() => {
         defaultShrinkingHeaderProps = {
-            rootElementRef: jest.fn(),
             className: "class-name",
             style: { color: "green" },
             tabIndex: 4,
@@ -41,11 +33,9 @@ describe("ShrinkingHeaderLinear", () => {
             value: 100,
             configurable: true
         });
-        lastMockedResizeObserver.notifyChange();
         shrinkingHeaderLinear.update();
 
         expect(shrinkingHeaderLinear).toMatchSnapshot();
-        expect(defaultShrinkingHeaderProps.rootElementRef).toHaveBeenCalledTimes(1);
     });
 
     it("updates the header & wrapping div height when the page gets scrolled", () => {
@@ -55,7 +45,6 @@ describe("ShrinkingHeaderLinear", () => {
             value: 100,
             configurable: true
         });
-        lastMockedResizeObserver.notifyChange();
         shrinkingHeaderLinear.update();
         expect(documentEventListeners).toHaveLength(1);
 
@@ -65,7 +54,6 @@ describe("ShrinkingHeaderLinear", () => {
             value: 75,
             configurable: true
         });
-        lastMockedResizeObserver.notifyChange();
         shrinkingHeaderLinear.update();
         expect(shrinkingHeaderLinear).toMatchSnapshot();
     });

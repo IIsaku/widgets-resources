@@ -8,25 +8,6 @@ exports[`ShrinkingHeaderThreshold applies the shrink class when the page gets sc
       Header
     </h1>
   }
-  rootElementRef={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          <header>
-            <h1>
-              Header
-            </h1>
-          </header>,
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
   shrinkThreshold={250}
   style={
     Object {
@@ -61,25 +42,6 @@ exports[`ShrinkingHeaderThreshold applies the shrink class when the page gets sc
     <h1>
       Header
     </h1>
-  }
-  rootElementRef={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          <header>
-            <h1>
-              Header
-            </h1>
-          </header>,
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
   }
   shrinkThreshold={250}
   style={
@@ -116,25 +78,6 @@ exports[`ShrinkingHeaderThreshold removes the shrink class when the page gets sc
       Header
     </h1>
   }
-  rootElementRef={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          <header>
-            <h1>
-              Header
-            </h1>
-          </header>,
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
   shrinkThreshold={250}
   style={
     Object {
@@ -170,25 +113,6 @@ exports[`ShrinkingHeaderThreshold removes the shrink class when the page gets sc
       Header
     </h1>
   }
-  rootElementRef={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          <header>
-            <h1>
-              Header
-            </h1>
-          </header>,
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
   shrinkThreshold={250}
   style={
     Object {
@@ -223,25 +147,6 @@ exports[`ShrinkingHeaderThreshold renders correctly when the page isn't scrolled
     <h1>
       Header
     </h1>
-  }
-  rootElementRef={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          <header>
-            <h1>
-              Header
-            </h1>
-          </header>,
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
   }
   shrinkThreshold={250}
   style={

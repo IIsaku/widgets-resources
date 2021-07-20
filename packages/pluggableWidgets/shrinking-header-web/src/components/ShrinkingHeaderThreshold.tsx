@@ -6,7 +6,6 @@ import "../ui/ShrinkingHeader.scss";
 import { useWrappingDivHeight } from "../utils/WrappingDivStyler";
 
 export interface ShrinkingHeaderThresholdProps {
-    rootElementRef?: (node: HTMLElement | null) => void;
     className?: string;
     style?: CSSProperties;
     tabIndex?: number;
@@ -15,7 +14,7 @@ export interface ShrinkingHeaderThresholdProps {
 }
 
 export function ShrinkingHeaderThreshold(props: ShrinkingHeaderThresholdProps): ReactElement {
-    const { rootElementRef, className, style, tabIndex, content, shrinkThreshold } = props;
+    const { className, style, tabIndex, content, shrinkThreshold } = props;
 
     const [headerElement, setHeaderElement] = useState<HTMLElement>();
     const [shrunk, setShrunk] = useState(false);
@@ -32,9 +31,8 @@ export function ShrinkingHeaderThreshold(props: ShrinkingHeaderThresholdProps): 
     const updateElement = useCallback(
         (node: HTMLElement | null) => {
             setHeaderElement(node ?? undefined);
-            rootElementRef?.(node);
         },
-        [rootElementRef, setHeaderElement]
+        [setHeaderElement]
     );
 
     useEffect(() => {

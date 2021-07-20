@@ -1,10 +1,9 @@
-import { createElement, CSSProperties, ReactElement, ReactNode, useCallback, useEffect, useRef, useState } from "react";
+import { createElement, CSSProperties, ReactElement, ReactNode, useEffect, useState } from "react";
 import classNames from "classnames";
 
 import "../ui/ShrinkingHeader.scss";
 
 export interface ShrinkingHeaderLinearProps {
-    rootElementRef?: (node: HTMLElement | null) => void;
     className?: string;
     style?: CSSProperties;
     tabIndex?: number;
@@ -14,21 +13,11 @@ export interface ShrinkingHeaderLinearProps {
 }
 
 export function ShrinkingHeaderLinear(props: ShrinkingHeaderLinearProps): ReactElement {
-    const { rootElementRef, className, style, tabIndex, content, initHeight, shrunkHeight } = props;
+    const { className, style, tabIndex, content, initHeight, shrunkHeight } = props;
 
     const [headerHeight, setHeaderHeight] = useState<number>();
 
-    const wrappingDivHeight = useRef(initHeight);
-    const previousHeaderHeight = useRef(headerHeight);
-
     const actualClassName = classNames("widget-shrinking-header", "widget-shrinking-header-linear", className);
-
-    const updateElement = useCallback(
-        (node: HTMLElement | null) => {
-            rootElementRef?.(node);
-        },
-        [rootElementRef]
-    );
 
     useEffect(() => {
         const updateHeaderHeight = function (): void {
@@ -54,19 +43,9 @@ export function ShrinkingHeaderLinear(props: ShrinkingHeaderLinearProps): ReactE
         };
     }, [initHeight, shrunkHeight, setHeaderHeight]);
 
-    if (headerHeight !== previousHeaderHeight.current) {
-        previousHeaderHeight.current = headerHeight;
-
-        if (initHeight !== wrappingDivHeight.current) {
-            wrappingDivHeight.current = initHeight;
-        }
-    }
-
     return (
-        <div className={actualClassName} style={{ ...style, height: wrappingDivHeight.current }} tabIndex={tabIndex}>
-            <header ref={updateElement} style={{ height: headerHeight }}>
-                {content}
-            </header>
+        <div className={actualClassName} style={{ ...style, height: initHeight }} tabIndex={tabIndex}>
+            <header style={{ height: headerHeight }}>{content}</header>
         </div>
     );
 }

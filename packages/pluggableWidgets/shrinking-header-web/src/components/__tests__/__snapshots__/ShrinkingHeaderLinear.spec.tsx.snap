@@ -9,27 +9,6 @@ exports[`ShrinkingHeaderLinear renders correctly 1`] = `
     </h1>
   }
   initHeight={100}
-  rootElementRef={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          <header
-            style="height: 100px;"
-          >
-            <h1>
-              Header
-            </h1>
-          </header>,
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
   shrunkHeight={25}
   style={
     Object {
@@ -72,27 +51,6 @@ exports[`ShrinkingHeaderLinear updates the header & wrapping div height when the
     </h1>
   }
   initHeight={100}
-  rootElementRef={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          <header
-            style="height: 75px;"
-          >
-            <h1>
-              Header
-            </h1>
-          </header>,
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
   shrunkHeight={25}
   style={
     Object {
